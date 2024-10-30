@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Chat Server</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body onload="getRooms()">
+<nav>
+    <div class="logo">
+        <i class='bx bx-menu-alt-left menu-icon'></i>
+        <span class="logo-name">SpeedTyper</span>
+    </div>
+    <div class="sidebar">
+        <div class="logo">
+            <i class='bx bx-menu-alt-left menu-icon'></i>
+            <span class="logo-name">SpeedTyper</span>
+        </div>
+        <div class="sidebar-content">
+            <ul class="lists">
+                <li class="list">
+                    <a href="index.html" class="nav-link">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="link">Homepage</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="about.html" class="nav-link">
+                        <i class='bx bx-info-square icon' ></i>
+                        <span class="link">About</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="site-content">
+    <div class="game-box">
+        <div class="wordsWrapper">
+            <div class="sentence" id="sentence">
+                Hi there! Please press "create a new room" to join a room. Get ready to start
+                typing away the moment the text shows up!
+            </div>
+        </div>
+        <div class="room-list">
+            <div class="room-title">
+                <h1>Select a Room</h1>
+            </div>
+            <div class="rooms" id="rooms">
+                <div class="room-card" title="click to join a room">33WDA</div>
+                <div class="room-card" title="click to join a room">33WDA</div>
+            </div>
+            <div class="create-button-container">
+                <button class="create-button" id="start-game" title="click to create a room">
+                    Create a New Room
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="results-container">
+        <p id="results">Results: X%</p>
+        <div id="timer-display">Time: 0s</div>
+        <div id="wpm-display">WPM: 0</div>
+    </div>
+</div>
+<section class="overlay"></section>
+
+<script>
+    const navBar = document.querySelector("nav"),
+        menuBtns = document.querySelectorAll(".menu-icon"),
+        overlay = document.querySelector(".overlay");
+
+    menuBtns.forEach(menuBtn => {
+        menuBtn.addEventListener("click", () => {
+            navBar.classList.toggle("open")
+        })
+    })
+
+    overlay.addEventListener("click", () => {
+        navBar.classList.remove("open")
+    })
+</script>
+<script src="js/main.js"></script>
+
+<form id="user-input-container">
+    <label for="input"></label>
+    <input type="text" class="input" id="input" placeholder="Type the above text here">
+    <button id="send-button" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+             viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round"
+             stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 12l14 0"></path>
+            <path d="M13 18l6 -6"></path>
+            <path d="M13 6l6 6"></path>
+        </svg>
+    </button>
+</form>
+</body>
+</html>

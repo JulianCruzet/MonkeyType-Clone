@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Chat Server</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <i class='bx bx-menu-alt-left menu-icon'></i>
+        <span class="logo-name">About Us</span>
+    </div>
+    <div class="sidebar">
+        <div class="logo">
+            <i class='bx bx-menu-alt-left menu-icon'></i>
+            <span class="logo-name">SpeedTyper</span>
+        </div>
+        <div class="sidebar-content">
+            <ul class="lists">
+                <li class="list">
+                    <a href="index.html" class="nav-link">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="link">Homepage</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="about.html" class="nav-link">
+                        <i class='bx bx-info-square icon' ></i>
+                        <span class="link">About</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="site-content">
+    <div class="contributor-card-container">
+        <div class="contributor-card" title="Jonathan's card" data-tilt data-tilt-scale="1.05">
+            <div class="profile-picture">
+                <img src="img/jonathan-profile-picture.png" alt="jonathan">
+            </div>
+            <div class="socials">
+                <i class='bx bxl-linkedin-square'></i>
+                <i class='bx bxl-github'></i>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="name">
+                <a href="https://github.com/JonathanMcKesey">Jonathan D. Mckesey</a>
+            </div>
+            <div class="description">
+                I would like to pursue a career in data science or quantitative research.
+                Currently doing a degree in Computer Science (Co-op).
+            </div>
+        </div>
+        <div class="contributor-card" title="Julians's card" data-tilt data-tilt-scale="1.05">
+            <div class="profile-picture">
+                <img src="img/julian-profile-picture.png" alt="julian">
+            </div>
+            <div class="socials">
+                <i class='bx bxl-linkedin-square'></i>
+                <i class='bx bxl-github' ></i>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="name">
+                <a href="https://github.com/JulianCruzet">Julian P. Cruzet</a>
+            </div>
+            <div class="description">
+                Hey! I am a Computer Science student, interested
+                in data analysis and software development!
+            </div>
+        </div>
+        <div class="contributor-card" title="Ali's Card" data-tilt data-tilt-scale="1.05">
+            <div class="profile-picture">
+                <img src="img/ali-profile-picture.png" alt="ali">
+            </div>
+            <div class="socials">
+                <i class='bx bxl-linkedin-square'></i>
+                <i class='bx bxl-github' ></i>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="name">
+                <a href="https://github.com/shambo2">Ali Shamsi</a>
+            </div>
+            <div class="description">
+                Interested In the world of Data!
+                Currently A 2nd Year Computer Science Student.
+            </div>
+        </div>
+        <div class="contributor-card" title="Dale's card" data-tilt data-tilt-scale="1.05">
+            <div class="profile-picture">
+                <img src="img/dale-profile-picture.png" alt="dale">
+            </div>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/dale-malapitan/">
+                    <i class='bx bxl-linkedin-square'></i>
+                </a>
+                <a href="https://github.com/dalemalapitan">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="mailto:dale.malapitan@ontariotechu.net">
+                    <i class='bx bxs-envelope'></i>
+                </a>
+            </div>
+            <div class="name">
+                <a href="https://github.com/DaleMalapitan">Dale Malapitan</a>
+            </div>
+            <div class="description">
+                Hi, I am a Computer Science student at Ontario Tech University.
+                I am interested in software development and data analysis!
+            </div>
+        </div>
+    </div>
+</div>
+<section class="overlay"></section>
+
+<script>
+    const navBar = document.querySelector("nav"),
+        menuBtns = document.querySelectorAll(".menu-icon"),
+        overlay = document.querySelector(".overlay");
+
+    menuBtns.forEach(menuBtn => {
+        menuBtn.addEventListener("click", () => {
+            navBar.classList.toggle("open")
+        })
+    })
+
+    overlay.addEventListener("click", () => {
+        navBar.classList.remove("open")
+    })
+</script>
+<script src="js/vanilla-tilt.js"></script>
+</body>
+</html>
